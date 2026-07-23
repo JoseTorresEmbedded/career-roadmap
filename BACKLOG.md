@@ -10,12 +10,11 @@ nothing has been identified yet, not that something was forgotten.
 ## Future repositories
 
 Nothing queued. `embedded-workstation` has moved out of the backlog and
-into [`ROADMAP.md`](ROADMAP.md) Phase 2 now that it has a concrete design —
-the repository has been created with an initial scaffold, and an initial
-architecture review is complete (see [`DECISIONS.md`](DECISIONS.md)
-D006–D009). Its remaining implementation tasks (finishing the reviewed
-architecture, first commit, migrating further toolchain setup) are tracked
-there, not here.
+into [`ROADMAP.md`](ROADMAP.md) Phase 2 — the repository has been created,
+publicly released, and validated end-to-end on a clean machine (see
+[`MILESTONES.md`](MILESTONES.md) and [`DECISIONS.md`](DECISIONS.md)
+D006–D009). Its one remaining task (migrating further toolchain setup used
+in `embedded-foundations`) is tracked there, not here.
 
 ## Study topics
 

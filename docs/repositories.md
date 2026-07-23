@@ -8,9 +8,9 @@ the map of everything in the ecosystem and how the pieces relate.
 
 | Repository | Purpose | Contains | Status |
 |---|---|---|---|
-| [`career-roadmap`](https://github.com/JoseTorresEmbedded/career-roadmap) | Project management hub | Roadmap, status, backlog, decisions, milestones | Active (this repository) — initial commit pending |
+| [`career-roadmap`](https://github.com/JoseTorresEmbedded/career-roadmap) | Project management hub | Roadmap, status, backlog, decisions, milestones | Active (this repository) — committed and synced with `origin/main` |
 | [`embedded-foundations`](https://github.com/JoseTorresEmbedded/embedded-foundations) | Embedded systems learning track | Laboratories, source code, technical documentation, experiments | Active — see `CURRENT_STATUS.md` for current module |
-| `embedded-workstation` | Reproducible development environment: safe configuration management, setup automation, and workstation documentation | Per-tool configuration (`bash/`, `git/`, `starship/`, `vscode/`, ...), the `setup.sh` entry point, `CLAUDE.md` | Under architecture refinement — see `ROADMAP.md` Phase 2 and `DECISIONS.md` D006–D009 |
+| [`embedded-workstation`](https://github.com/JoseTorresEmbedded/embedded-workstation) | Reproducible development environment: safe configuration management, setup automation, and workstation documentation | Per-tool configuration (`bash/`, `git/`, `starship/`, `vscode/`, ...), the `setup.sh` entry point, `CLAUDE.md` | Implemented, public, and validated on a clean machine — in maintenance/evolution; see `ROADMAP.md` Phase 2 and `MILESTONES.md` |
 
 ## Relationship between repositories
 
@@ -25,9 +25,10 @@ the map of everything in the ecosystem and how the pieces relate.
   and how do I reproduce it* — it reproduces and documents the development
   environment: safe configuration management, setup automation, and
   workstation documentation, separate from any one learning track.
-  The repository has been created with an initial scaffold and is currently
-  under architecture refinement ahead of its first commit (see
-  `DECISIONS.md` D006–D009).
+  The repository is public, has shipped its initial release, and has been
+  validated end-to-end on a second, clean machine; it is now in maintenance
+  and incremental evolution rather than active architecture refinement (see
+  `MILESTONES.md` and `DECISIONS.md` D006–D009).
 
 The rule of thumb: if content explains or implements engineering work, it
 belongs in a technical repository. If content is about tracking, planning,

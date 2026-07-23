@@ -7,6 +7,33 @@ itself, see [`MILESTONES.md`](MILESTONES.md).
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/):
 newest entry first, grouped by date.
 
+## 2026-07-23
+
+### Added
+
+- Recorded `embedded-workstation`'s initial release and its first
+  successful clean-machine validation (Ubuntu-Learning WSL2, office;
+  PASS: 25, WARN: 0, FAIL: 0) in `MILESTONES.md`.
+
+### Changed
+
+- Updated `CURRENT_STATUS.md`, `ROADMAP.md` Phase 2, `BACKLOG.md`, and
+  `docs/repositories.md` to reflect that `embedded-workstation` is
+  implemented, public, has shipped its first release, and has been
+  validated on a clean machine — moving it from "under architecture
+  refinement" into maintenance and evolution.
+- Reviewed `TODO.md`'s immediate next task (starting A02 - Memory Layout)
+  against the confirmed A02 status; already accurate, no change needed.
+
+### Fixed
+
+- Corrected stale wording in `CURRENT_STATUS.md`, `ROADMAP.md` Phase 0,
+  `BACKLOG.md`, and `docs/repositories.md` that still described
+  `career-roadmap` itself as awaiting its first commit. `origin/main`
+  already carries three commits for this repository, so "first commit
+  pending" was inaccurate and has been corrected to reflect that this
+  repository is already committed and synced.
+
 ## 2026-07-22
 
 ### Added

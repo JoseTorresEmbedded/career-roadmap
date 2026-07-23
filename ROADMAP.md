@@ -20,11 +20,10 @@ structure capable of supporting years of work.
 - [x] Claude Code configured
 - [x] Starship configured
 - [x] `embedded-foundations` repository created
-- [x] `career-roadmap` repository created (this repository) — initial
-      content drafted, first commit pending
+- [x] `career-roadmap` repository created (this repository) — committed
+      and synced with `origin/main`
 
-**Status:** Complete. (`career-roadmap`'s initial content is drafted
-locally and awaits its first commit — see [`CHANGELOG.md`](CHANGELOG.md).)
+**Status:** Complete.
 
 ## Phase 1 — Embedded Foundations
 
@@ -52,16 +51,23 @@ version-controlled repository: `embedded-workstation`.
 
 - [x] Conduct an initial design review of `embedded-workstation`
 - [x] Create the repository and its initial scaffold
-- [ ] Finish applying the reviewed architecture and get it reviewed/approved
-- [ ] First commit
+- [x] Finish applying the reviewed architecture and get it reviewed/approved
+- [x] First commit — initial release committed and pushed; repository is
+      public
+- [x] Validate the environment end-to-end on a second, clean machine
+      (Ubuntu-Learning WSL2, office) — full verification passed with
+      PASS: 25, WARN: 0, FAIL: 0
+- [x] Automate VS Code Remote-WSL settings and extension installation
 - [ ] Migrate/document further toolchain setup used in `embedded-foundations`
+      as new needs arise
 
-**Status:** Under architecture refinement. The repository has been created
-with an initial scaffold, and a design review has settled its structure
-(per-tool configuration directories), primary entry point (`setup.sh`), and
-its `CLAUDE.md` convention — see `DECISIONS.md` D006–D009. Refactoring to
-fully match that reviewed architecture is still being finished, ahead of
-review, approval, and the first commit.
+**Status:** Core goal achieved. `embedded-workstation` is implemented,
+public, has shipped its first release, and has been validated end-to-end on
+a second, clean machine — see [`MILESTONES.md`](MILESTONES.md) for the
+validation record. The repository has moved from active architecture
+refinement into maintenance and incremental evolution; the one remaining
+item (migrating further toolchain setup) continues as `embedded-foundations`
+surfaces real needs, rather than on a fixed schedule.
 
 ## Phase 3 and beyond
 
