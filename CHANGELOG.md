@@ -19,3 +19,32 @@ newest entry first, grouped by date.
   starting baseline.
 - Logged the first career-related engineering decisions in `DECISIONS.md`
   (repository split, structure choices).
+- Recorded the outcome of `embedded-workstation`'s initial design review in
+  `DECISIONS.md` (D006–D009): scoping resumes, per-tool configuration
+  directories (`bash/`, `git/`, `starship/`, `vscode/`) over a flat
+  `config/`, `setup.sh` as the primary installation entry point in place of
+  `bootstrap.sh`, and a `CLAUDE.md` convention for every repository in the
+  ecosystem.
+- Logged two process improvements identified during that review in
+  `IMPROVEMENTS.md`: reviewing architecture before scaffolding a new
+  repository, and giving every repository its own `CLAUDE.md`.
+
+### Changed
+
+- Updated `ROADMAP.md` Phase 2 to reflect that `embedded-workstation` is now
+  under architecture refinement following its initial design review, rather
+  than not yet started.
+- Brought `BACKLOG.md` and `docs/repositories.md` into alignment with
+  D006–D009: removed "deferred"/"planned" language for
+  `embedded-workstation`, described it as under architecture refinement,
+  and clarified each repository's responsibilities in
+  `docs/repositories.md`.
+- Updated `CURRENT_STATUS.md`: the repository status table and a new
+  "Where things stand, by category" section now reflect that
+  `embedded-workstation` has been created with an initial scaffold and is
+  under architecture refinement, replacing the earlier "Planned — not yet
+  created."
+- Corrected `ROADMAP.md`, `DECISIONS.md` (D006), `docs/repositories.md`, and
+  `BACKLOG.md`, which still stated the `embedded-workstation` repository
+  "has not been created yet" — now aligned with the fact that it exists
+  locally with an initial scaffold, pending review and its first commit.

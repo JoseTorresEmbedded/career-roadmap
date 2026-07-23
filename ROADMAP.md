@@ -50,13 +50,18 @@ only the top-level sequence; module-level detail belongs in that repository.
 debuggers, board configurations, build systems) into a dedicated,
 version-controlled repository: `embedded-workstation`.
 
-- [ ] Define the scope of `embedded-workstation`
-- [ ] Create the repository
-- [ ] Migrate/document the toolchain setup used in `embedded-foundations`
+- [x] Conduct an initial design review of `embedded-workstation`
+- [x] Create the repository and its initial scaffold
+- [ ] Finish applying the reviewed architecture and get it reviewed/approved
+- [ ] First commit
+- [ ] Migrate/document further toolchain setup used in `embedded-foundations`
 
-**Status:** Planned. Not started — deliberately deferred until Phase 1 has
-produced enough real toolchain usage to document accurately, rather than
-guessing at requirements up front.
+**Status:** Under architecture refinement. The repository has been created
+with an initial scaffold, and a design review has settled its structure
+(per-tool configuration directories), primary entry point (`setup.sh`), and
+its `CLAUDE.md` convention — see `DECISIONS.md` D006–D009. Refactoring to
+fully match that reviewed architecture is still being finished, ahead of
+review, approval, and the first commit.
 
 ## Phase 3 and beyond
 

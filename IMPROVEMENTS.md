@@ -45,3 +45,39 @@ realistic.
 **Change:** This repository was created and structured with Claude Code
 acting as engineering project manager. Future updates to it are expected to
 follow the same pattern.
+
+---
+
+## Conduct a design review before scaffolding a new repository
+
+**Identified:** 2026-07-22
+
+While working out the structure for `embedded-workstation`, it became clear
+that settling on structure only after starting to create files risks
+locking in choices that don't hold up as the repository grows — a flat
+`config/` directory, for instance, works fine for a handful of files but
+becomes hard to navigate once several tools' configurations are mixed
+together in it.
+
+**Change:** Adopted a standing practice of conducting an explicit design
+review — covering structure, entry points, and conventions — before
+scaffolding any new repository, rather than starting from file creation.
+`embedded-workstation` is the first repository this was applied to; see
+`DECISIONS.md` D006–D008.
+
+---
+
+## Give every repository its own `CLAUDE.md` instead of relying on session memory
+
+**Identified:** 2026-07-22
+
+The `embedded-workstation` design review made it clear that
+repository-specific context — conventions, structure, constraints — was
+otherwise left for Claude Code to reconstruct from scratch each session, or
+for the user to repeat manually. That doesn't scale as more repositories
+come online.
+
+**Change:** Every repository in the ecosystem will include a root-level
+`CLAUDE.md` documenting its own conventions and structure, so that context
+is durable and co-located with the repository it describes. See
+`DECISIONS.md` D009.

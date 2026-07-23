@@ -9,12 +9,13 @@ nothing has been identified yet, not that something was forgotten.
 
 ## Future repositories
 
-- **`embedded-workstation`** — A dedicated repository for the complete
-  embedded development environment (toolchains, debug tooling, board
-  configs, build systems). Deliberately not started yet: scoping it now,
-  before enough real toolchain usage exists in `embedded-foundations`, would
-  mean guessing at its structure instead of documenting what's actually
-  used.
+Nothing queued. `embedded-workstation` has moved out of the backlog and
+into [`ROADMAP.md`](ROADMAP.md) Phase 2 now that it has a concrete design —
+the repository has been created with an initial scaffold, and an initial
+architecture review is complete (see [`DECISIONS.md`](DECISIONS.md)
+D006–D009). Its remaining implementation tasks (finishing the reviewed
+architecture, first commit, migrating further toolchain setup) are tracked
+there, not here.
 
 ## Study topics
 

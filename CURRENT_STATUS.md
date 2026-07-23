@@ -11,7 +11,9 @@ and [`MILESTONES.md`](MILESTONES.md).
 The foundational development environment is fully configured, and hands-on
 embedded engineering work has begun. The current focus is systems-level
 fundamentals — starting with the compilation process and moving into memory
-layout — inside the `embedded-foundations` repository.
+layout — inside the `embedded-foundations` repository. In parallel,
+`embedded-workstation` is under architecture refinement following its
+initial design review, ahead of its first commit.
 
 ## Environment status
 
@@ -36,21 +38,36 @@ a new need arises.
 |---|---|
 | `embedded-foundations` | ✔ Created — active, in progress |
 | `career-roadmap` | ✔ Created — this repository (initial content drafted, first commit pending) |
-| `embedded-workstation` | Planned — not yet created |
+| `embedded-workstation` | Architecture refinement in progress |
 
-## Active work
+## Where things stand, by category
+
+### Active work
 
 - **Track:** `embedded-foundations`
 - **Completed module:** A01 - Compilation Process
 - **Current module:** A02 - Memory Layout (next up)
 
+### Architecture refinement
+
+- **Track:** `embedded-workstation`
+- Repository created; initial scaffold completed (structure, docs, scripts,
+  `CLAUDE.md`).
+- Architecture review completed: modular per-tool configuration, `setup.sh`
+  as the single entry point, and a `CLAUDE.md` convention — see
+  [`DECISIONS.md`](DECISIONS.md) D006–D009.
+- Repository refactoring pending: finishing and verifying the reviewed
+  architecture before it is reviewed, approved, and given its first commit.
+
+### Future planned work
+
+- Nothing beyond the above is currently scheduled. Further
+  `embedded-workstation` phases (Linux/Windows environment rollout, embedded
+  toolchains, debugging, automation) and further `embedded-foundations`
+  modules (A03 onward) will be defined only as the work above completes —
+  see [`ROADMAP.md`](ROADMAP.md).
+
 ## Immediate next action
 
 Begin **A02 - Memory Layout** in `embedded-foundations`. See
 [`TODO.md`](TODO.md) for the concrete breakdown.
-
-## What's not in progress right now
-
-- `embedded-workstation` is planned but not started. It will not begin until
-  there is a concrete need for a dedicated development-environment
-  repository — see [`BACKLOG.md`](BACKLOG.md).

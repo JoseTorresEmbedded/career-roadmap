@@ -89,3 +89,87 @@ exists from working through `embedded-foundations`, would mean guessing at
 requirements instead of documenting an environment that's actually in use.
 It is tracked in [`BACKLOG.md`](BACKLOG.md) until there is enough real usage
 to scope it accurately.
+
+---
+
+## D006 — `embedded-workstation` moves from deferred to active design review
+
+**Date:** 2026-07-22
+**Status:** Active
+
+**Decision:** An initial design review of `embedded-workstation` has been
+conducted, producing concrete architectural decisions (D007–D009). The
+repository has since been created with an initial scaffold, ahead of a
+first commit.
+
+**Reasoning:** This updates D005's "not scoped yet" status now that a
+design review has actually happened. D005 is not deleted or rewritten — it
+remains the accurate record of why scoping waited until now; this entry
+just marks that the wait is over, scoping is underway, and the repository
+exists as a local scaffold. See [`ROADMAP.md`](ROADMAP.md) Phase 2 for
+current status.
+
+---
+
+## D007 — Modularize `embedded-workstation` configuration by tool
+
+**Date:** 2026-07-22
+**Status:** Active
+
+**Decision:** Configuration in `embedded-workstation` is organized into
+per-tool directories (`bash/`, `git/`, `starship/`, `vscode/`, and further
+directories as tools are added), rather than placed directly under a single
+flat `config/` directory.
+
+**Reasoning:** The repository exists to hold configuration for a growing
+number of independent tools, each with its own files, install/link targets,
+and update cadence. A flat `config/` directory mixes all of that together
+and gets harder to reason about as tools are added — it becomes unclear
+which files belong to which tool, and changing one tool's setup risks
+touching files that belong to another. Grouping by tool keeps each tool's
+configuration self-contained, so a tool can be added, changed, or removed
+without touching anything unrelated — consistent with this ecosystem's
+existing preference (D004) for structure that stays easy to hold in memory
+without relying on it.
+
+---
+
+## D008 — `setup.sh` replaces `bootstrap.sh` as the primary installation entry point
+
+**Date:** 2026-07-22
+**Status:** Active
+
+**Decision:** `embedded-workstation`'s primary entry point script is named
+`setup.sh`, not `bootstrap.sh`.
+
+**Reasoning:** "Bootstrap" describes a one-time, first-run action, but the
+actual need is a script that gets run more than once — to configure a new
+machine, and to re-apply or update configuration on a machine already set
+up. Naming it `bootstrap.sh` would describe only the first use case and
+misrepresent the second. `setup.sh` reflects the script's real, repeated
+usage pattern, in line with this ecosystem's existing preference (D003) for
+names that state actual purpose rather than following convention or habit.
+
+---
+
+## D009 — Every repository in the ecosystem includes a root-level `CLAUDE.md`
+
+**Date:** 2026-07-22
+**Status:** Active
+
+**Decision:** Every repository in this ecosystem — starting with
+`embedded-workstation`, and extended to every other repository, existing or
+future — includes its own repository-level `CLAUDE.md` file, documenting
+that repository's own conventions, structure, and constraints.
+
+**Reasoning:** Claude Code is already the standing collaborator for
+maintaining this repository (see [`IMPROVEMENTS.md`](IMPROVEMENTS.md)), and
+that role extends naturally to the other repositories in the ecosystem.
+Without in-repo context, each session has to either rediscover a
+repository's conventions from scratch or rely on the user repeating them,
+which doesn't hold up as the number of repositories grows. A per-repository
+`CLAUDE.md` gives each repository the same kind of durable, written record
+for AI-assisted work that `DECISIONS.md` and `README.md` already give for
+human-directed project management — and keeps that context co-located with
+the repository it describes, rather than centralized here where it would go
+stale or grow unwieldy.
