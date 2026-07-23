@@ -28,6 +28,8 @@ newest entry first, grouped by date.
 - Logged two process improvements identified during that review in
   `IMPROVEMENTS.md`: reviewing architecture before scaffolding a new
   repository, and giving every repository its own `CLAUDE.md`.
+- Added `CLAUDE.md`, defining the permanent operating rules for AI agents
+  working in this repository.
 
 ### Changed
 
@@ -48,3 +50,6 @@ newest entry first, grouped by date.
   `BACKLOG.md`, which still stated the `embedded-workstation` repository
   "has not been created yet" — now aligned with the fact that it exists
   locally with an initial scaffold, pending review and its first commit.
+- Updated `README.md` with a new "AI Assistant" section and a file-overview
+  entry for `CLAUDE.md`, integrating it into the repository's documented
+  structure.

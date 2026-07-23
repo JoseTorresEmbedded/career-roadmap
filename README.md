@@ -36,6 +36,7 @@ continuously — not written once and abandoned.
 | [`DECISIONS.md`](DECISIONS.md) | Engineering and career decisions, with reasoning, in the order they were made. |
 | [`CHANGELOG.md`](CHANGELOG.md) | A dated log of changes to this repository itself. |
 | [`docs/repositories.md`](docs/repositories.md) | The map of every repository in the ecosystem and how it relates to this one. |
+| [`CLAUDE.md`](CLAUDE.md) | Permanent operating rules for AI agents working in this repository — behavior policy, not repository content. |
 
 ## Suggested reading order
 
@@ -60,3 +61,19 @@ content of, the repositories where actual engineering work happens. See
   Stale status is worse than no status.
 - **Small, frequent edits.** This repository is meant to be touched often —
   after every study session, not once a quarter.
+
+## AI Assistant
+
+This repository contains a repository-level [`CLAUDE.md`](CLAUDE.md) file
+defining the permanent operating rules for AI agents (such as Claude Code)
+working in this repository.
+
+- `CLAUDE.md` is part of this repository's architecture, alongside the
+  tracking files listed above — it is not incidental or optional context.
+- It defines AI *behavior* — role, working rules, and boundaries — not
+  repository *content*. For what this repository contains, see the table
+  above and [`docs/repositories.md`](docs/repositories.md).
+- It is expected to remain synchronized with this repository's mission,
+  standards, and working methodology as they evolve. A change to how this
+  repository is meant to be maintained is not complete until `CLAUDE.md`
+  reflects it.
