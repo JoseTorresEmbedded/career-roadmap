@@ -7,6 +7,34 @@ itself, see [`MILESTONES.md`](MILESTONES.md).
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/):
 newest entry first, grouped by date.
 
+## 2026-11-18
+
+### Added
+
+- `MILESTONES.md`: entries for 2026-11-17 (Make laboratory, PR #1) and
+  2026-11-18 (introduction to CMake, PR #2; A02 - Memory Layout, PR #3;
+  `-Wcast-qual` in all laboratory builds; correction of A01's
+  documentation).
+- `DECISIONS.md`: D010 (build-system laboratory before finishing A02), D011
+  (A02/A05 scope split), D012 (`-Wcast-qual` as a standard laboratory
+  flag).
+- `IMPROVEMENTS.md`: branch-and-PR workflow for laboratories, the four-month
+  status-tracking lapse, and one-step-one-question guided laboratories.
+- `BACKLOG.md`: SSH agent for the GitHub key, to be added through
+  `embedded-workstation`.
+
+### Changed
+
+- `CURRENT_STATUS.md`: A01 and A02 complete, A03 - Stack is the active
+  task; GitHub SSH row notes the passphrase prompt; removed the claim that
+  all three repositories were clean and synchronized, which no longer
+  applied.
+- `ROADMAP.md` Phase 1: build-system laboratory and A02 checked, A03 marked
+  as next; the remaining module list now points to `embedded-foundations`'
+  `README.md`, which owns it.
+- `TODO.md`: next task is A03; added a review of A02's personal
+  documentation sections.
+
 ## 2026-07-23
 
 ### Added

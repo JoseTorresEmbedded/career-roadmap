@@ -81,3 +81,48 @@ come online.
 `CLAUDE.md` documenting its own conventions and structure, so that context
 is durable and co-located with the repository it describes. See
 `DECISIONS.md` D009.
+
+---
+
+## Develop each laboratory on a branch and integrate it through a self-reviewed PR
+
+**Identified:** 2026-11-17
+
+Until now, laboratory work was committed straight to `main`, with no review
+step and no record of how a piece of work evolved.
+
+**Change:** Each laboratory in `embedded-foundations` now lives on its own
+branch (`lab/<module>-<topic>`), with one commit per step, and is integrated
+into `main` through a pull request that is reviewed in "Files changed"
+before merging. Merges use `--merge` (not squash) to preserve the
+step-by-step history. Applied to PRs #1–#3. It also practices the review
+workflow used in professional teams.
+
+---
+
+## Status tracking lapsed for four months
+
+**Identified:** 2026-11-18
+
+The standing habit of updating status the moment work completes (see the
+first entry in this file) did not hold: between 2026-07-23 and 2026-11-17
+there was no tracked engineering activity, and `CURRENT_STATUS.md` kept
+describing A02 as "not started" throughout.
+
+**Change:** Status was brought up to date on 2026-11-18 in the same sitting
+as A02's completion. No new mechanism adopted yet; whether the original
+habit holds from here is the thing to watch.
+
+---
+
+## Guided laboratories: one step and one question at a time
+
+**Identified:** 2026-11-17
+
+During the Make laboratory, receiving several sub-steps and three to five
+questions per message made it hard to answer them; outputs were being
+pasted without the explanations.
+
+**Change:** Guided laboratory sessions with Claude Code now present one
+small step and one question per message, and move on only after the
+answer.

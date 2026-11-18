@@ -24,8 +24,12 @@ up during study, before being sequenced into the roadmap.
 
 ## Tooling & environment
 
-Nothing pending. The Phase 0 environment (see `ROADMAP.md`) is complete and
-stable.
+- **SSH agent for the GitHub key** (identified 2026-11-18). The key's
+  passphrase is requested on every `git push`/`fetch`. Add an agent (e.g.
+  `keychain`) through `embedded-workstation` — package plus bash
+  configuration — rather than editing `~/.bashrc` by hand, since that file
+  is managed by `embedded-workstation`. Belongs to `ROADMAP.md` Phase 2's
+  open item (further toolchain setup as needs arise).
 
 ## Process improvements
 

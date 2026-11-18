@@ -10,14 +10,15 @@ rather than being left here checked off.
 
 ## Now
 
-- [ ] Start **A02 - Memory Layout** in `embedded-foundations`.
-- [ ] Once A02 is scoped, record its sub-topics in that repository (not here
-      — this repository tracks progress, not curriculum content).
+- [ ] Start **A03 - Stack** in `embedded-foundations`, on its own branch.
+- [ ] Review the personal sections of `docs/A02_MemoryLayout.md` in
+      `embedded-foundations` ("My Mental Model", "What Surprised Me") and
+      rewrite them in my own words — they were drafted with Claude Code.
 
 ## Up next
 
-- [ ] After A02 completes, update `CURRENT_STATUS.md`, add an entry to
-      `MILESTONES.md`, and identify the next module (A03) to keep the
+- [ ] After A03 completes, update `CURRENT_STATUS.md`, add an entry to
+      `MILESTONES.md`, and identify the next module (A04) to keep the
       roadmap accurate.
 
 ## Housekeeping

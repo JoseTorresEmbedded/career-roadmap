@@ -1,6 +1,6 @@
 # Current Status
 
-> Last updated: 2026-07-23
+> Last updated: 2026-11-18
 
 This file is a snapshot, not a history. It always reflects *today*. For the
 history of how status has changed over time, see [`CHANGELOG.md`](CHANGELOG.md)
@@ -8,15 +8,17 @@ and [`MILESTONES.md`](MILESTONES.md).
 
 ## Where I am today
 
-**The single active engineering task is to begin A02 - Memory Layout in
-`embedded-foundations`.** A01 - Compilation Process is complete; A02 has
-not started yet.
+**The single active engineering task is to begin A03 - Stack in
+`embedded-foundations`.** A01 - Compilation Process and A02 - Memory Layout
+are complete; A03 has not started yet.
 
-Everything else is settled, not active work: `embedded-workstation` is
-**complete** — implemented, public, released, and validated — and is now in
-maintenance/evolution only, with no engineering work in progress there.
-`career-roadmap` (this repository) is **up to date** as of the date above;
-its tracking files agree with each other and with the state described here.
+Between A01 and A02, a build-system laboratory (Make, then an introduction
+to CMake) was completed on A01's example code — see
+[`MILESTONES.md`](MILESTONES.md) and [`DECISIONS.md`](DECISIONS.md) D010.
+
+`embedded-workstation` remains in maintenance/evolution, with one newly
+identified need (an SSH agent, see [`BACKLOG.md`](BACKLOG.md)) and no
+engineering work in progress there.
 
 ## Environment status
 
@@ -27,20 +29,20 @@ its tracking files agree with each other and with the state described here.
 | Ubuntu (WSL) | ✔ Configured |
 | VS Code | ✔ Configured |
 | Git | ✔ Configured |
-| GitHub SSH | ✔ Configured |
+| GitHub SSH | ✔ Configured — the key's passphrase is requested on every push (no SSH agent yet) |
 | GitHub CLI | ✔ Configured |
 | Claude Code | ✔ Configured |
 | Starship prompt | ✔ Configured |
 
-The environment is stable. No outstanding environment work is planned unless
-a new need arises.
+The environment is stable. The only open environment item is the SSH agent
+listed in [`BACKLOG.md`](BACKLOG.md).
 
 ## Repository status
 
 | Repository | Status |
 |---|---|
-| `embedded-foundations` | ✔ Created — active, in progress (only repository with engineering work under way) |
-| `career-roadmap` | ✔ Created — this repository, up to date, committed and synced with `origin/main` |
+| `embedded-foundations` | ✔ Active — A01 and A02 complete, A03 next; `main` synced with `origin/main` after PR #3 |
+| `career-roadmap` | ✔ This repository — tracking files updated as of the date above |
 | `embedded-workstation` | ✔ Complete — public, initial release shipped and validated; in maintenance/evolution, no active engineering work |
 
 ## Where things stand, by category
@@ -48,8 +50,13 @@ a new need arises.
 ### Active work
 
 - **Track:** `embedded-foundations`
-- **Completed module:** A01 - Compilation Process
-- **Next module:** A02 - Memory Layout (not yet started)
+- **Completed modules:** A01 - Compilation Process, A02 - Memory Layout
+- **Completed side laboratory:** build systems (Make, introduction to CMake),
+  on A01's example code
+- **Next module:** A03 - Stack (not yet started)
+- **Workflow:** each laboratory is developed on its own branch and integrated
+  into `main` through a self-reviewed pull request (PRs #1–#3 so far) — see
+  [`IMPROVEMENTS.md`](IMPROVEMENTS.md).
 
 ### Maintenance and evolution (no active engineering work)
 
@@ -58,29 +65,18 @@ a new need arises.
   to `origin/main`.
 - Validated end-to-end on a second, clean Ubuntu-Learning WSL2 distribution
   at the office: full environment verification passed with PASS: 25,
-  WARN: 0, FAIL: 0, covering Git, SSH, GitHub CLI, Claude Code, GCC, GDB,
-  Make, CMake, Python, Starship, shell utilities, and VS Code.
-- VS Code extensions were installed on the validated machine, and
-  Remote-WSL settings are now managed by `embedded-workstation`.
-- Validation surfaced and fixed five issues in `embedded-workstation`
-  itself (a `setup.sh` abort after initial verification, an unsafe `sed`
-  expression in managed-block replacement, non-transactional config
-  application, missing regression tests, and unautomated VS Code remote
-  settings) — see [`MILESTONES.md`](MILESTONES.md) and that repository's
-  own `CHANGELOG.md` for detail.
-- All three repositories in the ecosystem (`career-roadmap`,
-  `embedded-foundations`, `embedded-workstation`) are cloned, clean,
-  synchronized with `origin/main`, and contain their own `CLAUDE.md`.
+  WARN: 0, FAIL: 0 — see [`MILESTONES.md`](MILESTONES.md) and that
+  repository's own `CHANGELOG.md` for detail.
+- Newly identified need: an SSH agent (e.g. `keychain`) so the GitHub key's
+  passphrase is not requested on every push. Not yet scheduled — see
+  [`BACKLOG.md`](BACKLOG.md).
 
 ### Future planned work
 
-- Nothing beyond the above is currently scheduled. Further
-  `embedded-workstation` evolution (further toolchain migration as
-  `embedded-foundations` needs arise) and further `embedded-foundations`
-  modules (A03 onward) will be defined only as the work above completes —
-  see [`ROADMAP.md`](ROADMAP.md).
+- Further `embedded-foundations` modules (A03 onward) follow the module
+  list in that repository's `README.md` — see [`ROADMAP.md`](ROADMAP.md).
 
 ## Immediate next action
 
-Begin **A02 - Memory Layout** in `embedded-foundations`. See
-[`TODO.md`](TODO.md) for the concrete breakdown.
+Begin **A03 - Stack** in `embedded-foundations`. See [`TODO.md`](TODO.md)
+for the concrete breakdown.

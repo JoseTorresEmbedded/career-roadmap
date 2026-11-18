@@ -36,10 +36,13 @@ Tracked module-by-module inside `embedded-foundations`. This roadmap tracks
 only the top-level sequence; module-level detail belongs in that repository.
 
 - [x] A01 - Compilation Process
-- [ ] A02 - Memory Layout *(next)*
-- [ ] Further modules — to be defined as A02 completes and the
-      `embedded-foundations` curriculum is extended. Not enumerated here in
-      advance to avoid inventing structure that doesn't exist yet.
+- [x] Build-system laboratory (Make, introduction to CMake), on A01's
+      example code — see `DECISIONS.md` D010
+- [x] A02 - Memory Layout
+- [ ] A03 - Stack *(next)*
+- [ ] Remaining modules (A04–A09, then phases B–E) — enumerated in
+      `embedded-foundations`' own `README.md`, which owns the module list.
+      Not duplicated here.
 
 **Status:** In progress.
 

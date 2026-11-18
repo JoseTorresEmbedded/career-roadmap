@@ -42,6 +42,34 @@ advance.
   missing regression tests, and unautomated VS Code remote settings) — see
   that repository's own `CHANGELOG.md` for implementation detail.
 
+## 2026-11-17
+
+- **Make laboratory completed**, in `embedded-foundations` (PR #1). A01's
+  hand-written Makefile evolved step by step into a generic one: pattern
+  rules and automatic variables, automatic header dependencies
+  (`-MMD -MP`), out-of-tree builds in `build/`, validated `debug`/`release`
+  modes in separate directories, and a guarded `clean`. First laboratory
+  integrated through a self-reviewed pull request.
+
+## 2026-11-18
+
+- **Introduction to CMake completed**, in `embedded-foundations` (PR #2).
+  `CMakeLists.txt` for A01 with a static `math` library, strict C11 (no GNU
+  extensions), warnings on both targets, and per-configuration build
+  directories; `PRIVATE`/`PUBLIC` propagation verified in the generated
+  build.
+- **A02 - Memory Layout completed**, in `embedded-foundations` (PR #3),
+  with its documentation (`docs/A02_MemoryLayout.md`): eight experiments
+  with binary evidence (`nm`, `objdump`, `/proc/self/maps`) covering
+  section placement, linkage, optimization effects, `_FORTIFY_SOURCE`,
+  ASLR/PIE load base, and writes to `const` data.
+- **`-Wcast-qual` added to every laboratory build** (Makefiles and
+  `CMakeLists.txt`); it immediately caught a `const`-discarding cast in
+  A02.
+- **Corrected an unverified claim in A01's documentation**: with GCC 11.4,
+  an uninitialized global is reported by `nm` as `B`, not `C` (common
+  symbols require `-fcommon`).
+
 ## How entries are added
 
 - One entry per milestone, under the date it was actually completed.

@@ -173,3 +173,57 @@ for AI-assisted work that `DECISIONS.md` and `README.md` already give for
 human-directed project management — and keeps that context co-located with
 the repository it describes, rather than centralized here where it would go
 stale or grow unwieldy.
+
+---
+
+## D010 — Build-system laboratory (Make, then CMake) before finishing A02
+
+**Date:** 2026-11-17
+**Status:** Active
+
+**Decision:** Pause A02 to run a build-system laboratory on A01's example
+code: first deepen GNU Make by evolving A01's Makefile, then introduce
+CMake. The resulting generic Makefile is reused by every later module.
+
+**Reasoning:** CMake generates Makefiles, so understanding Make first makes
+CMake's output readable instead of opaque — consistent with
+`embedded-foundations`' principle that understanding comes before
+automation. Make is also used directly by projects on the long-term path
+(the Linux kernel, Buildroot, U-Boot). The laboratory was time-boxed and
+ended by reusing its Makefile to finish A02.
+
+---
+
+## D011 — A02 covers the memory layout; ELF section detail moves to A05
+
+**Date:** 2026-11-18
+**Status:** Active
+
+**Decision:** A02 - Memory Layout covers where each kind of variable is
+placed and the memory map of a running process (runtime addresses, heap,
+stack, ASLR, permissions). The detailed study of ELF sections (`readelf -S`,
+`size`, why `.bss` takes no file space, compiler-generated sections) belongs
+to A05 - Sections.
+
+**Reasoning:** The first half of the A02 laboratory (section placement with
+`nm` and `objdump`) overlapped heavily with A05's stated topic. Without an
+explicit split, A05 would have repeated A02. The split is also recorded in
+`embedded-foundations`' `README.md`.
+
+---
+
+## D012 — `-Wcast-qual` is part of the standard laboratory flags
+
+**Date:** 2026-11-18
+**Status:** Active
+
+**Decision:** Every laboratory build in `embedded-foundations` (Makefiles and
+`CMakeLists.txt`) uses `-std=c11 -Wall -Wextra -Wcast-qual -Werror`. The
+flag list in that repository's `CLAUDE.md` was updated accordingly.
+
+**Reasoning:** An A02 experiment showed that writing to a `const` object
+after casting away `const` compiles silently under `-Wall -Wextra -Werror`
+and only fails at runtime (a segmentation fault on Linux; possibly a silent
+corruption on a microcontroller). `-Wcast-qual` turns this into a compile
+error and matches MISRA C:2012 Rule 11.8. It caught a real case in A02's own
+code as soon as it was enabled.
